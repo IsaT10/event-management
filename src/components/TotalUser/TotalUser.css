@@ -1,0 +1,16 @@
+.user_bg {
+  background-image: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0.52),
+      rgba(6, 6, 6, 0.73)
+    ),
+    url("/src/assets/people.png");
+  background-size: cover;
+  height: 300px;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .user_bg {
+    height: 200px;
+  }
+}
