@@ -42,9 +42,9 @@ const Signup = () => {
           });
 
         //verify email
-        verifyEmail().then(() => {
-          //   toast.success("Please check your email");
-        });
+        // verifyEmail().then(() => {
+        //     toast.success("Please check your email");
+        // });
 
         navigate("/");
       })
@@ -87,22 +87,16 @@ const Signup = () => {
   const handlePasswordChange = (e) => {
     const password = e.target.value;
 
-    if (password.length < 8) {
+    if (password.length < 6) {
       setErrors({
         ...errors,
-        password: "Password must has at least 8 characters",
+        password: "Password must has at least 6 characters",
       });
       setUserInfo({ ...userInfo, password: "" });
     } else if (!/(?=.*?[A-Z])/.test(password)) {
       setErrors({
         ...errors,
         password: "At least one upper case",
-      });
-      setUserInfo({ ...userInfo, password: "" });
-    } else if (!/(?=.*?[0-9])/.test(password)) {
-      setErrors({
-        ...errors,
-        password: "At least one digit",
       });
       setUserInfo({ ...userInfo, password: "" });
     } else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
@@ -140,16 +134,18 @@ const Signup = () => {
     <div className="">
       <form
         onSubmit={handleSubmit}
-        className="bg-slate-200 w-[400px] h-[700px] mx-auto rounded-md flex flex-col px-6 lg:px-10  justify-between shadow-lg py-4"
+        className="bg-slate-200 sm:w-[350px] md:w-[400px] h-[700px] mx-auto rounded-md flex flex-col px-6 lg:px-10  justify-between shadow-lg py-4"
       >
-        <h2 className="text-3xl font-bold text-center">Register</h2>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">
+          Register
+        </h2>
         <label className="label">
-          <span className="label-text mt-4 text-gray-600 font-semibold text-base">
+          <span className="label-text lg:mt-4 text-gray-600 font-semibold ">
             Your name
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full max-w-xs"
+          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full"
           type="text"
           placeholder="Name"
           name="name"
@@ -157,12 +153,12 @@ const Signup = () => {
           required
         />
         <label className="label">
-          <span className="label-text mt-2 text-gray-600 font-semibold text-base">
+          <span className="label-text lg:mt-2 text-gray-600 font-semibold ">
             Your email
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none  focus:outline-primary focus:outline-offset-2 input-bordered w-full max-w-xs"
+          className="input focus:outline-2 border-none  focus:outline-primary focus:outline-offset-2 input-bordered w-full "
           type="text"
           placeholder="E-mail address"
           name="emali"
@@ -173,12 +169,12 @@ const Signup = () => {
           {errors.email}
         </p>
         <label className="label">
-          <span className="label-text mt-2 text-gray-600 font-semibold text-base">
+          <span className="label-text lg:mt-2 text-gray-600 font-semibold ">
             Password
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full max-w-xs"
+          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full "
           type="password"
           placeholder="Password"
           name="password"
@@ -189,12 +185,12 @@ const Signup = () => {
           {errors.password}
         </p>
         <label className="label">
-          <span className="label-text mt-2 text-gray-600 font-semibold text-base">
+          <span className="label-text lg:mt-2 text-gray-600 font-semibold ">
             Confirm password
           </span>
         </label>
         <input
-          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full max-w-xs"
+          className="input focus:outline-2 border-none focus:outline-primary focus:outline-offset-2 input-bordered w-full "
           type="password"
           placeholder="Confirm password"
           name="confirm"
@@ -206,33 +202,30 @@ const Signup = () => {
         </p>
 
         <div className="form-control">
-          <label className="cursor-pointer label">
+          <label className="cursor-pointer flex gap-4 items-center">
             <input
               onClick={handleChecked}
               type="checkbox"
-              className="checkbox checkbox-primary rounded-full"
+              className="checkbox checkbox-sm rounded-full"
             />
-            <p className="label-text mr-16 text-gray-400 font-semibold">
-              I agree to the{" "}
-              <Link
-                to="/termsandconditions"
-                className="link no-underline text-primary"
-              >
+            <p className="label-text text-gray-400 font-semibold">
+              I agree to the
+              <span className="link no-underline text-primary-color">
                 Terms & Conditions
-              </Link>
+              </span>
             </p>
           </label>
         </div>
         {}
         <button
-          className="bg-primary px-8 py-2 text-white uppercase font-semibold rounded-sm mt-6 mx-auto w-40 disabled:opacity-75 "
+          className="bg-primary-color px-8 py-2 text-white uppercase font-semibold rounded-sm  mx-auto w-40 disabled:opacity-75 "
           disabled={!checked}
         >
           Sign up
         </button>
         <p className="text-center mt-3">
           Already have an account?
-          <Link to="/login" className="link no-underline text-primary">
+          <Link to="/login" className="link no-underline text-primary-color">
             {""} Login
           </Link>
         </p>

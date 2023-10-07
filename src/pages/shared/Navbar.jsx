@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const Navbar = () => {
+  const { logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        // toast.success("Successfully logout");
+        // toast.warning("s");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   return (
     <div className="navbar py-3 px-0">
       <div className="md:navbar-start  w-full flex justify-between items-center">
@@ -94,6 +107,7 @@ const Navbar = () => {
               Sign up
             </NavLink>
           </li>
+          <li onClick={handleLogout}>logout</li>
         </ul>
       </div>
     </div>
