@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import Navbar from "../pages/shared/Navbar";
 import Footer from "../components/Footer/Footer";
 import Banner from "../components/Header/Banner";

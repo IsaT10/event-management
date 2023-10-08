@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "photo": "https://i.ibb.co/6gBxVTk/pexels-yan-krukau-9072214.jpg",
+    "description": "Offline esports events are physical gatherings where competitive video gaming tournaments, leagues, and conventions take place in a designated venue rather than over the internet. These events offer a dynamic spectator experience, with live audiences cheering on their favorite teams and players, creating an electrifying atmosphere. They facilitate networking opportunities within the esports industry, attract media coverage, and provide a platform for sponsors to engage with the audience. Offline events also support merchandise sales, fan interactions, and regional esports growth. While the COVID-19 pandemic temporarily impacted these events, they continue to be a vital part of the esports landscape, eagerly awaited by fans and stakeholders alike.That is why we grabbed the chance and organize gaming events",
+    "price": 49.99,
+    "title": "E-sports Events"
+  },
+  {
+    "id": 2,
+    "photo": "https://i.ibb.co/dfWNswp/pexels-andrea-piacquadio-3755440.jpg",
+    "description": "The primary goal is to raise funds for a specific charitable cause or organization. Ticket sales, sponsorships, and donations generated from the event go toward supporting various charitable initiatives, such as medical research, disaster relief, education, or poverty alleviation.A football charity match event management team is crucial for organizing successful charitable football events. This team includes roles like the Event Director, Project Manager, Marketing, and Sponsorship Coordinators who plan and promote the event. Ticketing and Sales teams manage revenue streams, while Venue and Facilities Management ensures a suitable venue and compliance. Player and Talent Coordinators handle celebrity involvement, Volunteer Managers oversee volunteer efforts, and Security and Safety teams prioritize attendee well-being. Broadcast and Production professionals manage the event's presentation. Finance and Accounting experts handle financial aspects, ensuring transparent fund allocation, while Post-Event Reporting teams evaluate the event's impact. Together, they create a memorable and safe experience that maximizes fundraising for charitable causes and fosters community engagement",
+    "price": 39.99,
+    "title": "Charity football match"
+  },
+  {
+    "id": 3,
+    "photo": "https://i.ibb.co/94st7Gk/mahmur-marganti-s7-R3s-Gbi-Yv-A-unsplash.jpg",
+    "description": "A badminton event management team is integral to the successful organization of badminton tournaments and competitions. This multifaceted team comprises various roles, each contributing to different aspects of the event's planning and execution. The Event Director sets the event's strategy and objectives, while the Tournament Coordinator manages the schedule and match logistics. Marketing and Promotion teams are responsible for promoting the event and attracting participants and sponsors. Sponsorship Coordinators secure financial support and ensure sponsors receive visibility. Registration and Participant Services teams ensure a smooth experience for players. Venue and Facilities Management handle logistics and equipment setup, while Officials and Referees ensure fair play. Ticketing and Sales teams maximize revenue, and Security and Safety personnel prioritize attendee well-being. Broadcast and Streaming experts enable global access to the event. Finance and Accounting professionals manage finances transparently, and Post-Event Reporting teams evaluate success and gather feedback. Together, they ensure that badminton events are well-organized, enjoyable, and contribute to the sport's growth and promotion.",
+    "price": 69.99,
+    "title": "Badminton tournaments"
+  },
+  {
+    "id": 4,
+    "photo": "https://i.ibb.co/Y0h3ymz/chess-3325010-1920.jpg",
+    "description": "Our perspective as members of a chess event management team, our mission is to orchestrate chess tournaments and competitions that celebrate the intellectual and strategic aspects of the game. We work in synergy, each with our unique roles, to ensure these events are executed flawlessly. Our responsibilities range from organizing venues and schedules to promoting the events, handling registrations, and coordinating with skilled chess arbiters and officials. We deeply appreciate the importance of chess as a sport that fosters critical thinking and sportsmanship. Through our dedication to detail and passion for chess, we aim to create a competitive yet welcoming environment that encourages players of all levels to test their skills, learn, and ultimately share in the enjoyment of the timeless game of chess.",
+    "price": 59.99,
+    "title": "Brainpower Battle Royale events"
+  },
+  {
+    "id": 5,
+    "photo": "https://i.ibb.co/s28LFvW/istockphoto-1002107936-1024x1024.jpg",
+    "description": "Our cycling event management team, our purpose is to curate exceptional experiences for cyclists and enthusiasts. We function as a well-coordinated unit, with each member contributing their expertise to ensure the success of our events. Our roles are diverse, from designing challenging and scenic routes to attracting participants and sponsors through marketing and promotion. We also focus on logistics, rider safety, volunteer coordination, and financial transparency. We understand the passion that drives cyclists, and we strive to create events that not only challenge their skills but also foster a sense of community and accomplishment. Through our meticulous planning and dedication, we aim to provide participants with a memorable and fulfilling cycling experience that aligns with their love for the sport and encourages camaraderie among fellow cyclists.",
+    "price": 79.99,
+    "title": "Cycling events"
+  },
+  {
+    "id": 6,
+    "photo": "https://i.ibb.co/MMGPxQZ/Children-participating-in-Sack-race-on-the-Annual-Sports-Day-of-APS.jpg",
+    "description": "From the perspective of an annual school event management team member, our role is integral in orchestrating successful and memorable school events. We work closely with event coordinators, educators, and students to ensure that every detail, from planning to execution, is meticulously organized. Our team comprises individuals with distinct responsibilities - from conceptualizing engaging themes and activities to handling logistics, safety measures, and volunteer coordination. We're driven by our dedication to creating an inclusive and enjoyable environment for students and the school community. We understand the importance of these events in fostering a sense of belonging and school spirit. Through effective teamwork and careful planning, we aim to make each annual school event an unforgettable experience that promotes unity, enthusiasm, and lasting memories for all involved.",
+    "price": 29.99,
+    "title": "Annual school festival"
+  }
+]

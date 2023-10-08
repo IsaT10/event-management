@@ -1,12 +1,12 @@
 import React from "react";
-import Banner from "../../components/Header/Banner";
 import TotalUser from "../../components/TotalUser/TotalUser";
 import TeamMember from "../../components/TeamMember/TeamMember";
+import Services from "../../components/Services/Services";
 
 const Home = () => {
   return (
     <>
-      <h1>fljfkdjfjd</h1>
+      <Services />
       <TotalUser />
       <TeamMember />
     </>

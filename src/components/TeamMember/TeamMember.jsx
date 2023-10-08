@@ -9,7 +9,7 @@ import img4 from "../../assets/user4.jpg";
 const TeamMember = () => {
   return (
     <div className="my-20">
-      <SectionHeading>Our Team Member</SectionHeading>
+      <SectionHeading>Our Team Members</SectionHeading>
 
       <div className="flex gap-6 flex-wrap justify-between">
         <Membercard img={img1} skill={"Business Manager"}>

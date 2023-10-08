@@ -5,11 +5,15 @@ import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import Contact from "../pages/Contact/Contact";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Services from "../components/Services/Services";
+import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/signup", element: <Signup /> },
@@ -21,7 +25,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+
       { path: "/login", element: <Login /> },
+      { path: "/services", element: <Services /> },
+      { path: "/service-details/:id", element: <ServiceDetails /> },
     ],
   },
 ]);
