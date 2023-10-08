@@ -14,3 +14,8 @@
     height: 200px;
   }
 }
+@media (max-width: 450px) {
+  .user_bg {
+    height: 150px;
+  }
+}

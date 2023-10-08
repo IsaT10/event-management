@@ -131,10 +131,10 @@ const Signup = () => {
   };
 
   return (
-    <div className="">
+    <div className="bg-slate-200 sm:w-[350px] md:w-[400px] h-[700px] flex flex-col px-6 lg:px-10  mx-auto rounded-md my-10">
       <form
         onSubmit={handleSubmit}
-        className="bg-slate-200 sm:w-[350px] md:w-[400px] h-[700px] mx-auto rounded-md flex flex-col px-6 lg:px-10  justify-between shadow-lg py-4"
+        className="flex flex-col  justify-between py-4"
       >
         <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">
           Register
@@ -208,7 +208,7 @@ const Signup = () => {
               type="checkbox"
               className="checkbox checkbox-sm rounded-full"
             />
-            <p className="label-text text-gray-400 font-semibold">
+            <p className="label-text text-gray-400 font-semibold mt-2">
               I agree to the
               <span className="link no-underline text-primary-color">
                 Terms & Conditions
@@ -218,7 +218,7 @@ const Signup = () => {
         </div>
         {}
         <button
-          className="bg-primary-color px-8 py-2 text-white uppercase font-semibold rounded-sm  mx-auto w-40 disabled:opacity-75 "
+          className="bg-primary-color px-8 py-2 text-white uppercase font-semibold rounded-sm  mx-auto w-40 disabled:opacity-75 mt-2"
           disabled={!checked}
         >
           Sign up
@@ -230,15 +230,13 @@ const Signup = () => {
           </Link>
         </p>
         <p className="text-center">----Or, sign up with----</p>
-        <div className="flex justify-center gap-3 mt-4">
-          <button
-            onClick={handleGoogleSignIn}
-            className="bg-white p-3 rounded-full"
-          >
-            google{" "}
-          </button>
-        </div>
       </form>
+      <button
+        onClick={handleGoogleSignIn}
+        className="bg-white p-3 rounded-full mt-4"
+      >
+        google
+      </button>
     </div>
   );
 };

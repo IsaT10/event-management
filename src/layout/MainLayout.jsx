@@ -14,7 +14,7 @@ const MainLayout = () => {
         {location.pathname === "/" && <Banner />}
       </header>
 
-      <main className="max-w-6xl mx-4 xl:mx-auto ">
+      <main className="max-w-7xl mx-4 xl:mx-auto ">
         <Outlet />
       </main>
 
