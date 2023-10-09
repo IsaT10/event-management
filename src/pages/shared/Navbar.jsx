@@ -22,11 +22,11 @@ const Navbar = () => {
       <div className="navbar  max-w-7xl mx-auto">
         <div className="md:navbar-start  w-full flex justify-between items-center">
           <div className="flex gap-2 md:gap-2 lg:gap-5 items-center">
-            <div>
+            <Link to="/">
               <h1 className="text-lg md:text-xl lg:text-2xl text-primary-color font-semibold ">
                 EventChamp
               </h1>
-            </div>
+            </Link>
           </div>
 
           <div className="dropdown ">
@@ -60,8 +60,22 @@ const Navbar = () => {
                 <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <Link to="/signup">Sign up</Link>
+                <Link to="/gallery">Gallery</Link>
               </li>
+              {user?.email ? (
+                <li>
+                  <Link onClick={handleLogout}>Logout</Link>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/signup">Sign up</Link>
+                  </li>
+                  <li>
+                    <Link to="/login">login</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

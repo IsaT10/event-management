@@ -12,58 +12,71 @@ import img9 from "../../assets/stem-list-ryRU-cd1yas-unsplash.jpg";
 const Gallery = () => {
   return (
     <>
-      <div class="grid grid-cols-12 grid-rows-5 gap-4">
-        <div class="col-span-6 row-span-2 bg-blue-200">Column 1</div>
-        <div class="col-span-3 bg-green-200">Column 2</div>
-        <div class="col-span-3 bg-red-200">Column 3</div>
-
-        <div class="col-span-4 row-span-3 bg-yellow-200">Column 1</div>
-        <div class="col-span-4 bg-purple-200">Column 2</div>
-        <div class="col-span-4 bg-pink-200">Column 3</div>
-
-        <div class="col-span-2 bg-orange-200">Column 1</div>
-        <div class="col-span-4 row-span-2 bg-indigo-200">Column 2</div>
-        <div class="col-span-3 row-span-2 bg-teal-200">Column 3</div>
-        <div class="col-span-3 bg-cyan-200">Column 4</div>
-
-        <div class="col-span-6 row-span-2 bg-lime-200">Column 1</div>
-        <div class="col-span-3 bg-rose-200">Column 2</div>
-        <div class="col-span-3 row-span-3 bg-violet-200">Column 3</div>
-
-        <div class="col-span-4 bg-amber-200">Column 1</div>
-        <div class="col-span-4 bg-emerald-200">Column 2</div>
-        <div class="col-span-4 bg-gray-200">Column 3</div>
-      </div>
-
-      <div className="grid grid-cols-12 grid-rows-5  gap-8 grid-flow-row">
-        <figure className=" col-span-3">
-          <img className="h-[250px] object-cover " src={img1} alt="" />
+      <div className="grid grid-cols-6 md:grid-cols-10  grid-flow-dense my-8 gap-3 md:gap-4">
+        <figure className="flex items-center justify-center col-span-6 sm:col-span-3  md:col-span-4 sm:row-span-2">
+          <img
+            className="w-full h-full align-middle inline-block object-cover rounded-md"
+            src={img1}
+            alt=""
+          />
         </figure>
         {/* <div className="row-span-3 col-span-3"> */}
-        <figure className="col-span-4 row-span-2">
-          <img className="h-[250px] object-cover" src={img2} alt="" />
+        <figure className="col-span-3 sm:col-span-3">
+          <img
+            className="max-w-full h-[300px] align-middle inline-block object-cover rounded-md "
+            src={img2}
+            alt=""
+          />
         </figure>
         {/* </div> */}
-        <figure className="  ">
-          <img className="h-[250px] object-cover " src={img3} alt="" />
+        <figure className="col-span-3">
+          <img
+            className="w-full h-[300px] align-middle inline-block object-cover rounded-md  "
+            src={img3}
+            alt=""
+          />
         </figure>
-        <figure className="">
-          <img className="h-[250px] object-cover " src={img4} alt="" />
+        <figure className="col-span-6">
+          <img
+            className="w-full h-[300px] align-middle inline-block object-cover rounded-md  "
+            src={img4}
+            alt=""
+          />
         </figure>
-        <figure className="">
-          <img className="h-[250px] object-cover " src={img5} alt="" />
+        <figure className="col-span-3">
+          <img
+            className="max-w-full h-[300px] align-middle inline-block object-cover rounded-md  "
+            src={img5}
+            alt=""
+          />
         </figure>
-        <figure className="">
-          <img className="h-[250px] object-cover " src={img6} alt="" />
+        <figure className="col-span-3">
+          <img
+            className="w-full h-[300px] align-middle inline-block object-cover rounded-md  "
+            src={img6}
+            alt=""
+          />
         </figure>
-        <figure className="">
-          <img className="h-[250px] object-cover " src={img7} alt="" />
+        <figure className="col-span-3 sm:col-span-2 md:col-span-4 md:row-span-2">
+          <img
+            className="max-w-full h-full align-middle inline-block object-cover rounded-md  "
+            src={img7}
+            alt=""
+          />
         </figure>
-        <figure className="">
-          <img className="h-[250px] object-cover " src={img8} alt="" />
+        <figure className="col-span-3 sm:col-span-2 md:col-span-3">
+          <img
+            className="max-w-full h-[300px] align-middle inline-block object-cover rounded-md  "
+            src={img8}
+            alt=""
+          />
         </figure>
-        <figure className="">
-          <img className="h-[250px] object-cover " src={img9} alt="" />
+        <figure className="col-span-6 sm:col-span-2 md:col-span-3">
+          <img
+            className="max-w-full h-[300px] align-middle inline-block object-cover rounded-md  "
+            src={img9}
+            alt=""
+          />
         </figure>
         <figure></figure>
       </div>

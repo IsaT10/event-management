@@ -36,11 +36,16 @@ const Login = () => {
       .catch((error) => {
         console.error(error);
         console.log(error.message);
+        console.log(error.code);
+
+        if (error.code === "auth/network-request-failed") {
+          toast.error("Network request failed");
+          return;
+        }
 
         setErrors({
           ...errors,
-          commonError:
-            "Email or Password doesn't match. Please try with correct email and password.",
+          commonError: "Invalid email or password. Please try again.",
         });
       });
   };
