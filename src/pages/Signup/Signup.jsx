@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const [userInfo, setUserInfo] = useState({
@@ -17,7 +19,11 @@ const Signup = () => {
   });
   const [checked, setChecked] = useState(false);
 
-  const { createUser, googleSignIn, userProfileUpdate, verifyEmail } =
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  console.log(from);
+
+  const { createUser, googleSignIn, userProfileUpdate } =
     useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -27,8 +33,6 @@ const Signup = () => {
 
     createUser(userInfo.email, userInfo.password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
         form.reset();
 
         //update user info
@@ -45,8 +49,10 @@ const Signup = () => {
         // verifyEmail().then(() => {
         //     toast.success("Please check your email");
         // });
+        toast.success("Successful Signup");
+        navigate(from, { replace: true });
 
-        navigate("/");
+        // navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -56,13 +62,12 @@ const Signup = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        toast.success("Successful Login");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
       });
   };
 
@@ -233,9 +238,10 @@ const Signup = () => {
       </form>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-white p-3 rounded-full mt-4"
+        className="bg-white p-3 rounded-full mt-4 flex items-center justify-center gap-2"
       >
-        google
+        <FaGoogle className="text-primary-color" />
+        <span>Google</span>
       </button>
     </div>
   );

@@ -8,6 +8,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Services from "../components/Services/Services";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
+import Gallery from "../pages/Gallery/Gallery";
 
 const router = createBrowserRouter([
   {
@@ -25,10 +26,25 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/gallery",
+        element: (
+          <PrivateRoute>
+            <Gallery />
+          </PrivateRoute>
+        ),
+      },
 
       { path: "/login", element: <Login /> },
       { path: "/services", element: <Services /> },
-      { path: "/service-details/:id", element: <ServiceDetails /> },
+      {
+        path: "/service-details/:id",
+        element: (
+          <PrivateRoute>
+            <ServiceDetails />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);

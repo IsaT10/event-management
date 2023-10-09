@@ -33,7 +33,7 @@ const Footer = () => {
           </nav>
         </div>
 
-        <div className="w-[300px] mx-auto flex justify-center">
+        <div className="w-[200px] mx-auto flex justify-center">
           <nav>
             <header className="footer-title">Social</header>
             <div className="grid grid-flow-col gap-4">

@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { toast } from "react-toastify";
+import avatar from "../../assets/user8.png";
 
 const Navbar = () => {
-  const { logOut } = useContext(AuthContext);
+  const { logOut, user } = useContext(AuthContext);
+  console.log(user);
 
   const handleLogout = () => {
     logOut()
@@ -93,10 +95,9 @@ const Navbar = () => {
                 Contact
               </NavLink>
             </li>
-
             <li>
               <NavLink
-                to="/signup"
+                to="/gallery"
                 className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
@@ -105,10 +106,58 @@ const Navbar = () => {
                     : "font-semibold text-lg"
                 }
               >
-                Sign up
+                Gallery
               </NavLink>
             </li>
-            <li onClick={handleLogout}>logout</li>
+
+            {user?.email ? (
+              <>
+                <button
+                  className="bg-transparent border-2 text-sm md:text-base border-stone-800 rounded-sm px-3 py-1.5 sm:px-3 sm:py-1.5 md:px-4 md:py-1.5.5 text-stone font-semibold"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
+                <li className="font-semibold uppercase">{user?.displayName}</li>
+
+                {user?.photoURL ? (
+                  <div className="avatar">
+                    <div className="w-10 rounded-full">
+                      <img src={user.photoURL} alt="" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="">
+                    <div className="w-10 rounded-full bg-transparent">
+                      <img src={avatar} alt="" />
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <>
+                <li>
+                  <NavLink
+                    to="/signup"
+                    className={({ isActive, isPending }) =>
+                      isPending
+                        ? "pending"
+                        : isActive
+                        ? "text-primary-color underline font-semibold text-lg"
+                        : "font-semibold text-lg"
+                    }
+                  >
+                    Sign up
+                  </NavLink>
+                </li>
+                <Link
+                  to="/login"
+                  className="bg-transparent border-2 text-sm md:text-base border-primary-color rounded-sm px-3 py-1.5 sm:px-3 sm:py-1.5 md:px-4 md:py-1.5.5 text-primary-color font-semibold"
+                >
+                  Login
+                </Link>
+              </>
+            )}
           </ul>
         </div>
       </div>

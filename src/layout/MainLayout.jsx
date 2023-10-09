@@ -8,7 +8,7 @@ const MainLayout = () => {
   const location = useLocation();
 
   return (
-    <>
+    <div className="overflow-hidden">
       <header>
         <Navbar />
         {location.pathname === "/" && <Banner />}
@@ -21,7 +21,7 @@ const MainLayout = () => {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 };
 

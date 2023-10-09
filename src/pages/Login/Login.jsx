@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { toast } from "react-toastify";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
@@ -9,10 +10,10 @@ const Login = () => {
     password: "",
   });
 
-  console.log(userInfo.email);
   const [errors, setErrors] = useState({
     email: "",
     password: "",
+    commonError: "",
   });
 
   const { logIn, googleSignIn, resetPassword } = useContext(AuthContext);
@@ -24,31 +25,31 @@ const Login = () => {
     e.preventDefault();
     const form = e.target;
 
+    if (!userInfo.password) return;
     logIn(userInfo.email, userInfo.password)
       .then((result) => {
-        toast.success("Sign in successfully");
+        toast.success("Successful Login");
+
         navigate(from, { replace: true });
         form.reset();
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
         console.log(error.message);
 
-        toast.error("Invalid email or password. Please try again.", {
-          autoClose: 600,
+        setErrors({
+          ...errors,
+          commonError:
+            "Email or Password doesn't match. Please try with correct email and password.",
         });
-        if (error.code === "auth/invalid-login-credentials") {
-          console.log("email is invalid");
-        }
       });
   };
 
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        const user = result.user;
+        toast.success("Successful Login");
         navigate(from, { replace: true });
-        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -149,6 +150,9 @@ const Login = () => {
         <p className="text-red-600 text-sm font-semibold mt-1 ml-1">
           {errors.password}
         </p>
+        <p className="text-red-600 text-sm font-semibold mt-1 ml-1">
+          {errors.commonError}
+        </p>
         <button
           onClick={handleResetPassword}
           className="text-primary-color text-sm  ml-1 text-left"
@@ -169,9 +173,10 @@ const Login = () => {
       </form>
       <button
         onClick={handleGoogleSignIn}
-        className="bg-white p-3 rounded-full mt-4"
+        className="bg-white p-3 rounded-full mt-4 flex items-center justify-center gap-2"
       >
-        google
+        <FaGoogle className="text-primary-color" />
+        <span>Google</span>
       </button>
     </div>
   );
