@@ -6,12 +6,11 @@ import avatar from "../../assets/user8.png";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
-  console.log(user);
 
   const handleLogout = () => {
     logOut()
       .then(() => {
-        toast.success("logout");
+        toast.success("Successfully logged out");
       })
       .catch((error) => {
         // An error happened.

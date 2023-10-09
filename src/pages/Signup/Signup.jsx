@@ -21,7 +21,6 @@ const Signup = () => {
 
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  console.log(from);
 
   const { createUser, googleSignIn, userProfileUpdate } =
     useContext(AuthContext);
@@ -55,7 +54,7 @@ const Signup = () => {
         // navigate("/");
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   };
 
@@ -76,7 +75,7 @@ const Signup = () => {
   //     console.log(name);
   //     setUserInfo({ ...userInfo, name: name });
   //   };
-  console.log(userInfo.name);
+  // console.log(userInfo.name);
   const handleEmailChange = (e) => {
     const email = e.target.value;
 

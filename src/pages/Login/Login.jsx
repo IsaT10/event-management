@@ -16,7 +16,7 @@ const Login = () => {
     commonError: "",
   });
 
-  const { logIn, googleSignIn, resetPassword } = useContext(AuthContext);
+  const { logIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
@@ -34,10 +34,6 @@ const Login = () => {
         form.reset();
       })
       .catch((error) => {
-        console.error(error);
-        console.log(error.message);
-        console.log(error.code);
-
         if (error.code === "auth/network-request-failed") {
           toast.error("Network request failed");
           return;
@@ -57,9 +53,7 @@ const Login = () => {
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
+        console.error(error);
       });
   };
 
@@ -101,14 +95,14 @@ const Login = () => {
   };
 
   const handleResetPassword = () => {
-    resetPassword(userInfo.email)
-      .then(() => {
-        console.log(userInfo.email);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
+    // resetPassword(userInfo.email)
+    //   .then(() => {
+    //     console.log(userInfo.email);
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //   });
   };
 
   return (

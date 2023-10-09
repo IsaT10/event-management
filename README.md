@@ -10,6 +10,5 @@
 
 - In gallery page you will be able to see our some events pictures.
 
-https://www.messenger.com/t/4521299667985924
-https://www.messenger.com/t/4521299667985924
-[Named Link](http://www.google.fr/ "Named link title")
+[Named Link](https://event-champ.netlify.app/ "EventChamp")
+https://event-champ.netlify.app/

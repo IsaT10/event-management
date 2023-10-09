@@ -20,7 +20,7 @@ console.log(greetign);
 
 #### Answer: A.
 
-<i>When i run this code, it will declare the greeting variable , create the greetign variable, assign an empty object to it, and then log the greetign variable to the console /Thats why this will give empty object.</i>
+<i>I do not understand (greetign type mistake or trick you guys added) but I somehow answer with my broken english. We declare the greeting variable , create the greetign variable, assign an empty object to it, and then log the greetign variable to the console .Thats why this will give empty object.</i>
 
 </p>
 </details>
